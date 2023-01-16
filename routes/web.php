@@ -26,7 +26,11 @@ Route::get('/', function () {
     return view('home');
 });
 
- Route::get('/', function () {
+ Route::get('blog', function () {
+    //consulta a base de datos
+    $post = [
+        ['id' => 1, ]
+    ];
     return 'HOME PAGE';
 });
  Route::get('blog', function () {
