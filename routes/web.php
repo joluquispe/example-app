@@ -42,3 +42,10 @@ Route::get('blog/{slug}', function ($slug) {
     return view('blog', ['post' => $post]);
 });
  
+    // se copia esta ultima parte para comprobar los comandos git
+Route::get('blog/{slug}', function ($slug) {
+    //consulta a base de datos
+    $post = $slug;
+
+    return view('blog', ['post' => $post]);
+});
