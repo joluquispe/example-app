@@ -41,7 +41,4 @@ Route::get('blog/{slug}', function ($slug) {
 
     return view('blog', ['post' => $post]);
 });
- fijsdfjasjfasjf
- dfasdf
- sfasf
  
