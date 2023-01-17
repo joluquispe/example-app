@@ -28,11 +28,13 @@ Route::get('/', function () {
 
  Route::get('blog', function () {
     //consulta a base de datos
-    $post = [
-        ['id' => 1, ]
+    $posts = [
+        ['id' => 1, 'title' => 'PHP',     'slug' => 'php' ],
+        ['id' => 2, 'title' => 'Laravel', 'slug' => 'laravel' ]
     ];
-    return 'HOME PAGE';
+    return view('blog', ['posts' => $posts]);
 });
+
  Route::get('blog', function () {
     return 'Lista de Publicaciones';
 });
