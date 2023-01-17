@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
  Route::get('blog', function () {
     //consulta a base de datos
@@ -33,19 +33,12 @@ Route::get('/', function () {
         ['id' => 2, 'title' => 'Laravel', 'slug' => 'laravel' ]
     ];
     return view('blog', ['posts' => $posts]);
-});
+})->name('blog');
     
 Route::get('blog/{slug}', function ($slug) {
     //consulta a base de datos
     $post = $slug;
 
     return view('blog', ['post' => $post]);
-});
+})->name('post');
  
-    // se copia esta ultima parte para comprobar los comandos git
-Route::get('blog/{slug}', function ($slug) {
-    //consulta a base de datos
-    $post = $slug;
-
-    return view('blog', ['post' => $post]);
-});
