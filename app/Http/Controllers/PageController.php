@@ -20,12 +20,8 @@ class PageController extends Controller
         return view('blog', ['posts' => $posts]);
     }
 
-    public function post ($slug)
-    {
-        //consulta a base de datos
-        
-        $post = $slug;
-
+    public function post (Post $post)
+    {       
         return view('post', ['post' => $post]);
     }
 }
